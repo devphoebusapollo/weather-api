@@ -100,9 +100,6 @@ export default function Home() {
                       style={{
                         cursor: "pointer",
                         color: "#c8d7e6",
-                        borderBottom: "1px solid ",
-                      }}
-                      style={{
                         cursor: "pointer",
                         color: "#c8d7e6",
                       }}
