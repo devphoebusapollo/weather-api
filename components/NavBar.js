@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <Container>
       <header className="api-header" style={{ cursor: "pointer" }}>
-        <Link href={`/`}>
+        <Link href={`/`} passHref>
           <span>WEATHER API</span>
         </Link>
       </header>

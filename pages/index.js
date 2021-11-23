@@ -88,7 +88,7 @@ export default function Home() {
               relaxed
               style={{ cursor: "pointer", color: "#c8d7e6" }}
             >
-              <Link href={`/${city.name}`}>
+              <Link href={`/${city.name}`} passHref>
                 <List.Item
                   style={{
                     borderBottom: "1px solid #c8d7e6",
