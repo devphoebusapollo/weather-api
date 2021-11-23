@@ -53,6 +53,28 @@ export default function ViewCity({ city }) {
               <Flags item={city?.location?.country} />
               {`${city?.location?.country}`}
             </Header>
+            <Container
+              textAlign="center"
+              style={{ margin: "0", padding: ".5em" }}
+            >
+              <Image
+                src={`https:${city?.current?.condition?.icon}`}
+                alt={city?.current?.condition?.text}
+                width={150}
+                height={150}
+                className="image-icon"
+              />
+              <p
+                style={{
+                  fontSize: "1.5em",
+                  fontWeight: "bold",
+                  margin: "0",
+                  padding: "0",
+                }}
+              >
+                {city?.current?.condition?.text}
+              </p>
+            </Container>
             <Container style={{ margin: "1.5em" }}>
               <Grid columns={2} padded doubling={true}>
                 <Grid.Column
@@ -66,7 +88,8 @@ export default function ViewCity({ city }) {
                       fontFamily: "Impact",
                     }}
                   >
-                    {city?.current?.temp_c} &#8451;
+                    {city?.current?.temp_c}{" "}
+                    <span style={{ fontSize: ".5em" }}>&#8451;</span>
                   </p>
                 </Grid.Column>
                 <Grid.Column>
@@ -83,17 +106,6 @@ export default function ViewCity({ city }) {
                   </ul>
                 </Grid.Column>
               </Grid>
-            </Container>
-            <Container textAlign="center" style={{ margin: "1em" }}>
-              <Image
-                src={`https:${city?.current?.condition?.icon}`}
-                alt={city?.current?.condition?.text}
-                width={100}
-                height={100}
-              />
-              <p style={{ fontSize: "2em", fontWeight: "bold" }}>
-                {city?.current?.condition?.text}
-              </p>
             </Container>
           </Container>
         }
