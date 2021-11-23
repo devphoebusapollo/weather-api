@@ -86,7 +86,7 @@ export default function ViewCity({ city }) {
             </Container>
             <Container textAlign="center" style={{ margin: "1em" }}>
               <Image
-                src={`https://${city?.current?.condition?.icon}`}
+                src={`https:${city?.current?.condition?.icon}`}
                 alt={city?.current?.condition?.text}
                 width={100}
                 height={100}

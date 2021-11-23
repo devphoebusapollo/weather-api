@@ -255,8 +255,8 @@ export default function Flags({ item }) {
 
   return (
     <>
-      {country.map((c) => (
-        <span>{flagRenderer(c.countryCode)}</span>
+      {country.map((c, i) => (
+        <span key={i}>{flagRenderer(c.countryCode)}</span>
       ))}
     </>
   );
