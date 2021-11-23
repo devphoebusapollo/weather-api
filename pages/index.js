@@ -25,7 +25,7 @@ export default function Home() {
     e.preventDefault();
     try {
       const searches = await fetch(
-        `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${location}`
+        `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${location}`
       );
       const searchResponses = await searches.json();
       return setSuggestions(searchResponses);
